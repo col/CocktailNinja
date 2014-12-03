@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4A57801A2E5FED00C8BDCB /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A577F1A2E5FED00C8BDCB /* IngredientTableViewCell.swift */; };
 		EFFD35C91A2E0EB7001FA8F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD35C81A2E0EB7001FA8F3 /* AppDelegate.swift */; };
 		EFFD35CB1A2E0EB7001FA8F3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD35CA1A2E0EB7001FA8F3 /* MasterViewController.swift */; };
 		EFFD35CD1A2E0EB7001FA8F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD35CC1A2E0EB7001FA8F3 /* DetailViewController.swift */; };
@@ -14,6 +15,7 @@
 		EFFD35D21A2E0EB7001FA8F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFD35D11A2E0EB7001FA8F3 /* Images.xcassets */; };
 		EFFD35D51A2E0EB7001FA8F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFD35D31A2E0EB7001FA8F3 /* LaunchScreen.xib */; };
 		EFFD35E11A2E0EB7001FA8F3 /* CocktailNinjaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD35E01A2E0EB7001FA8F3 /* CocktailNinjaTests.swift */; };
+		EFFD36001A2E1482001FA8F3 /* HAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFD35FA1A2E0F1D001FA8F3 /* HAL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +26,24 @@
 			remoteGlobalIDString = EFFD35C21A2E0EB7001FA8F3;
 			remoteInfo = CocktailNinja;
 		};
+		EFFD35F91A2E0F1D001FA8F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFFD35F31A2E0F1D001FA8F3 /* HAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF6FD6571A2DDA24009C673C;
+			remoteInfo = HAL;
+		};
+		EFFD35FB1A2E0F1D001FA8F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFFD35F31A2E0F1D001FA8F3 /* HAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF6FD6621A2DDA24009C673C;
+			remoteInfo = HALTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF4A577F1A2E5FED00C8BDCB /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		EFFD35C31A2E0EB7001FA8F3 /* CocktailNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFD35C71A2E0EB7001FA8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFFD35C81A2E0EB7001FA8F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +55,7 @@
 		EFFD35DA1A2E0EB7001FA8F3 /* CocktailNinjaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailNinjaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFD35DF1A2E0EB7001FA8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFFD35E01A2E0EB7001FA8F3 /* CocktailNinjaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailNinjaTests.swift; sourceTree = "<group>"; };
+		EFFD35F31A2E0F1D001FA8F3 /* HAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HAL.xcodeproj; path = HAL/HAL.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFFD36001A2E1482001FA8F3 /* HAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 		EFFD35BA1A2E0EB7001FA8F3 = {
 			isa = PBXGroup;
 			children = (
+				EFFD35F31A2E0F1D001FA8F3 /* HAL.xcodeproj */,
 				EFFD35C51A2E0EB7001FA8F3 /* CocktailNinja */,
 				EFFD35DD1A2E0EB7001FA8F3 /* CocktailNinjaTests */,
 				EFFD35C41A2E0EB7001FA8F3 /* Products */,
@@ -86,6 +106,7 @@
 				EFFD35D11A2E0EB7001FA8F3 /* Images.xcassets */,
 				EFFD35D31A2E0EB7001FA8F3 /* LaunchScreen.xib */,
 				EFFD35C61A2E0EB7001FA8F3 /* Supporting Files */,
+				EF4A577F1A2E5FED00C8BDCB /* IngredientTableViewCell.swift */,
 			);
 			path = CocktailNinja;
 			sourceTree = "<group>";
@@ -113,6 +134,15 @@
 				EFFD35DF1A2E0EB7001FA8F3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFFD35F41A2E0F1D001FA8F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFFD35FA1A2E0F1D001FA8F3 /* HAL.framework */,
+				EFFD35FC1A2E0F1D001FA8F3 /* HALTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +212,12 @@
 			mainGroup = EFFD35BA1A2E0EB7001FA8F3;
 			productRefGroup = EFFD35C41A2E0EB7001FA8F3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EFFD35F41A2E0F1D001FA8F3 /* Products */;
+					ProjectRef = EFFD35F31A2E0F1D001FA8F3 /* HAL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EFFD35C21A2E0EB7001FA8F3 /* CocktailNinja */,
@@ -189,6 +225,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EFFD35FA1A2E0F1D001FA8F3 /* HAL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HAL.framework;
+			remoteRef = EFFD35F91A2E0F1D001FA8F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EFFD35FC1A2E0F1D001FA8F3 /* HALTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HALTests.xctest;
+			remoteRef = EFFD35FB1A2E0F1D001FA8F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EFFD35C11A2E0EB7001FA8F3 /* Resources */ = {
@@ -215,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4A57801A2E5FED00C8BDCB /* IngredientTableViewCell.swift in Sources */,
 				EFFD35CD1A2E0EB7001FA8F3 /* DetailViewController.swift in Sources */,
 				EFFD35CB1A2E0EB7001FA8F3 /* MasterViewController.swift in Sources */,
 				EFFD35C91A2E0EB7001FA8F3 /* AppDelegate.swift in Sources */,
@@ -411,6 +465,7 @@
 				EFFD35E61A2E0EB7001FA8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFFD35E71A2E0EB7001FA8F3 /* Build configuration list for PBXNativeTarget "CocktailNinjaTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +474,7 @@
 				EFFD35E91A2E0EB7001FA8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

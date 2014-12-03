@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import HAL
 
 class MasterViewController: UITableViewController {
 
+    let apiBaseUrl = "http://cocktail-ninja.herokuapp.com"
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
-
+    var drinksService: HAL?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +35,15 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
+        
+        HAL.get(apiBaseUrl).then(body: { (client) -> Promise<HAL> in
+            return client.get("drinks")
+        }).then(body: { (items) -> Void in
+            self.drinksService = items;
+            self.objects = items.embedded("drinks") as [AnyObject];
+            self.tableView.reloadData()
+            return
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,9 +52,12 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//        objects.insert(NSDate(), atIndex: 0)
+        drinksService?.post(["name": NSDate().description]).then( body: { (newItem) -> Void in
+            self.objects.insert(newItem, atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        });
     }
 
     // MARK: - Segues
@@ -51,7 +65,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row] as NSDate
+                let object = objects[indexPath.row] as HAL
                 let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
@@ -73,8 +87,8 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let object = objects[indexPath.row] as NSDate
-        cell.textLabel!.text = object.description
+        let object = objects[indexPath.row] as HAL
+        cell.textLabel!.text = object.attribute("name") as? String
         return cell
     }
 
