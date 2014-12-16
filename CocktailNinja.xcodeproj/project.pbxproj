@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C115D29D1A4043BD004FFDEF /* cocktail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C115D29C1A4043BD004FFDEF /* cocktail.jpg */; };
+		C115D29F1A404525004FFDEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C115D29E1A404525004FFDEF /* HomeViewController.swift */; };
+		C115D2A41A404A9C004FFDEF /* GCPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C115D2A31A404A9C004FFDEF /* GCPagedScrollView.m */; };
+		C115D2A71A405400004FFDEF /* MenuScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C115D2A61A405400004FFDEF /* MenuScrollView.swift */; };
+		C115D2AA1A40695A004FFDEF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C115D2A91A40695A004FFDEF /* MenuItem.swift */; };
 		EF4A57801A2E5FED00C8BDCB /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4A577F1A2E5FED00C8BDCB /* IngredientTableViewCell.swift */; };
 		EFFD35C91A2E0EB7001FA8F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD35C81A2E0EB7001FA8F3 /* AppDelegate.swift */; };
 		EFFD35CB1A2E0EB7001FA8F3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD35CA1A2E0EB7001FA8F3 /* MasterViewController.swift */; };
@@ -43,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C115D29C1A4043BD004FFDEF /* cocktail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cocktail.jpg; sourceTree = "<group>"; };
+		C115D29E1A404525004FFDEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		C115D2A11A404A9C004FFDEF /* CocktailNinja-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocktailNinja-Bridging-Header.h"; sourceTree = "<group>"; };
+		C115D2A21A404A9C004FFDEF /* GCPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPagedScrollView.h; sourceTree = "<group>"; };
+		C115D2A31A404A9C004FFDEF /* GCPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPagedScrollView.m; sourceTree = "<group>"; };
+		C115D2A61A405400004FFDEF /* MenuScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScrollView.swift; path = CustomViews/MenuScrollView.swift; sourceTree = "<group>"; };
+		C115D2A91A40695A004FFDEF /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItem.swift; path = Models/MenuItem.swift; sourceTree = "<group>"; };
 		EF4A577F1A2E5FED00C8BDCB /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		EFFD35C31A2E0EB7001FA8F3 /* CocktailNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFD35C71A2E0EB7001FA8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +89,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C115D2981A40439E004FFDEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C115D29B1A4043AA004FFDEF /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C115D29B1A4043AA004FFDEF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C115D29C1A4043BD004FFDEF /* cocktail.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C115D2A01A404533004FFDEF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C115D29E1A404525004FFDEF /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C115D2A51A404AA6004FFDEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C115D2A21A404A9C004FFDEF /* GCPagedScrollView.h */,
+				C115D2A31A404A9C004FFDEF /* GCPagedScrollView.m */,
+				C115D2A61A405400004FFDEF /* MenuScrollView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C115D2A81A40690D004FFDEF /* Models
+ */ = {
+			isa = PBXGroup;
+			children = (
+				C115D2A91A40695A004FFDEF /* MenuItem.swift */,
+			);
+			name = "Models\n";
+			sourceTree = "<group>";
+		};
 		EFFD35BA1A2E0EB7001FA8F3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +154,11 @@
 		EFFD35C51A2E0EB7001FA8F3 /* CocktailNinja */ = {
 			isa = PBXGroup;
 			children = (
+				C115D2A81A40690D004FFDEF /* Models
+ */,
+				C115D2A51A404AA6004FFDEF /* Views */,
+				C115D2A01A404533004FFDEF /* ViewControllers */,
+				C115D2981A40439E004FFDEF /* Resources */,
 				EFFD35C81A2E0EB7001FA8F3 /* AppDelegate.swift */,
 				EFFD35CA1A2E0EB7001FA8F3 /* MasterViewController.swift */,
 				EFFD35CC1A2E0EB7001FA8F3 /* DetailViewController.swift */,
@@ -107,6 +167,7 @@
 				EFFD35D31A2E0EB7001FA8F3 /* LaunchScreen.xib */,
 				EFFD35C61A2E0EB7001FA8F3 /* Supporting Files */,
 				EF4A577F1A2E5FED00C8BDCB /* IngredientTableViewCell.swift */,
+				C115D2A11A404A9C004FFDEF /* CocktailNinja-Bridging-Header.h */,
 			);
 			path = CocktailNinja;
 			sourceTree = "<group>";
@@ -249,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFFD35D01A2E0EB7001FA8F3 /* Main.storyboard in Resources */,
+				C115D29D1A4043BD004FFDEF /* cocktail.jpg in Resources */,
 				EFFD35D51A2E0EB7001FA8F3 /* LaunchScreen.xib in Resources */,
 				EFFD35D21A2E0EB7001FA8F3 /* Images.xcassets in Resources */,
 			);
@@ -268,8 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C115D29F1A404525004FFDEF /* HomeViewController.swift in Sources */,
 				EF4A57801A2E5FED00C8BDCB /* IngredientTableViewCell.swift in Sources */,
 				EFFD35CD1A2E0EB7001FA8F3 /* DetailViewController.swift in Sources */,
+				C115D2A71A405400004FFDEF /* MenuScrollView.swift in Sources */,
+				C115D2A41A404A9C004FFDEF /* GCPagedScrollView.m in Sources */,
+				C115D2AA1A40695A004FFDEF /* MenuItem.swift in Sources */,
 				EFFD35CB1A2E0EB7001FA8F3 /* MasterViewController.swift in Sources */,
 				EFFD35C91A2E0EB7001FA8F3 /* AppDelegate.swift in Sources */,
 			);
@@ -396,9 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CocktailNinja/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CocktailNinja/CocktailNinja-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -406,9 +476,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CocktailNinja/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CocktailNinja/CocktailNinja-Bridging-Header.h";
 			};
 			name = Release;
 		};
